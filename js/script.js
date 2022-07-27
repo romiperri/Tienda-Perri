@@ -17,13 +17,15 @@ const productos = [
     new Producto(3, "Pantalòn recto de jean", "Pantalòn de jean con tiro alto y corte recto", "Celeste-Azul oscuro-Negro", 6800),
     new Producto(4, "Polera", "Polera de morley con cuello", "Negro-Beige-Crema-Lila", 2780),
 ];
+let registro = prompt('Ingresa tu nombre para ver los precios');
+let confirmado = alert('Bienvenida/o!' + ' ' + registro + ' ' + 'ya puedes ver los productos');
 
 //usamos el metodo map para listar los nombres de nuestros productos
 const listaNombres = productos.map((producto) => producto.nombre);
-alert('Productos disponibles en stock :'+ ' ' + listaNombres);
+alert('Productos disponibles en stock :' + ' ' + listaNombres);
 
 // Usamos for of para recorrer el array e iterar sobre el precio de cada producto 
-for (const Precio of productos) {alert('El precio de cada producto es :' + ' ' + Precio.precio); }
+for (const Precio of productos) { alert('El precio de cada producto es :' + ' ' + Precio.precio); }
 
 //En este caso usamos for para recorrer el array de objetos, nos mostrara en consola cada uno. 
 for (let index = 0; index < productos.length; index++) {
@@ -42,7 +44,7 @@ alert("¡Muchas gracias por tu compra!");
 //Aca mostramos por consola los productos que tienen menor valor a 3000, con el metodo filter. Y los que son de mayor valor a 3000. 
 const menorValor = productos.filter((producto) => producto.precio < 3000);
 console.log(menorValor);
-const mayorValor = productos.filter ((producto) => producto.precio >3000); 
+const mayorValor = productos.filter((producto) => producto.precio > 3000);
 console.log(mayorValor);
 
 
