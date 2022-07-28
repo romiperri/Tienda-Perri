@@ -7,7 +7,7 @@ class Producto {
         this.descripcion = descripcion.toUpperCase();
         this.colores = colores;
         this.precio = precio;
-    }
+    }   
 }
 
 //Array de Productos
